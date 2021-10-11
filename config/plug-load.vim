@@ -19,7 +19,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
 Plug 'mg979/vim-visual-multi'
 Plug 'junegunn/vim-peekaboo'
+Plug 'machakann/vim-highlightedyank'
 
 call plug#end()
-
 
