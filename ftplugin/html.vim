@@ -3,5 +3,8 @@ setlocal tabstop=2
 setlocal softtabstop=2
 setlocal expandtab
 
-nnoremap <C-l> ^i<!-- <Esc>$a --><Esc>
+echo "html"
 
+function! s:SetTitle()
+    echo "html SetTitle function"
+endfunction

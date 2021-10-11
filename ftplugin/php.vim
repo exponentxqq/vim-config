@@ -4,13 +4,14 @@ setlocal softtabstop=4
 setlocal expandtab
 setlocal filetype=php
 
+echo "php"
+
 augroup php
 	autocmd!
-	autocmd BufNewFile * :call SetTitle()
-	autocmd BufNewFile * :echom "hahahah"
+	autocmd BufNewFile *.php :call s:SetTitle()
 augroup end
 
-function SetTitle()
+function s:SetTitle()
     call setline(1, "<?php")
     call setline(2, "")
     call setline(3, "")

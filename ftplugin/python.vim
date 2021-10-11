@@ -1,6 +1,6 @@
 augroup python
 	autocmd!
-	autocmd BufNewFile * :call SetTitle()
+	autocmd BufNewFile *.py :call SetTitle()
 augroup end
 
 function SetTitle()
