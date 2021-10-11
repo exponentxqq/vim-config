@@ -17,6 +17,8 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
+Plug 'mg979/vim-visual-multi'
+Plug 'junegunn/vim-peekaboo'
 
 call plug#end()
 

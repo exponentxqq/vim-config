@@ -103,8 +103,7 @@ let mapleader="," " 设置连续键前缀为,(默认为\)
 	noremap + za
 " }}}
 nnoremap <leader><Esc> :nohlsearch<CR>
-nnoremap <leader>y "+y
-nnoremap <leader>p "+p
+vnoremap <leader>y "+y
 map <leader><leader> <Esc>/<++><CR>:nohlsearch<CR>c4l
 
 source $HOME/.vim/config/plug-load.vim
