@@ -35,13 +35,15 @@ set expandtab
 set autochdir
 set autoread
 set nowrap
-" set paste " 这会导致Insert模式下Ctrl组合键失效
+set paste
 set listchars=tab:>-,trail:-
 set incsearch
 set ignorecase
 set smartcase
 set hlsearch
-set scroll=5
+set scrolloff=8
+set foldmethod=indent
+set foldlevel=99
 
 " 连续键配置
 let mapleader="," " 设置连续键前缀为,(默认为\)
@@ -54,12 +56,18 @@ let mapleader="," " 设置连续键前缀为,(默认为\)
     nnoremap <leader>6 :6b<CR>
 " }}}
 " 分屏连续键设置{{{
-    nnoremap <leader>vsp :vsp<CR>
-    nnoremap <leader>sp :sp<CR>
+	nnoremap <leader>sl :set splitright<CR>:vsplit<CR>
+	nnoremap <leader>sh :set nosplitright<CR>:vsplit<CR>
+	nnoremap <leader>sk :set nosplitbelow<CR>:split<CR>
+	nnoremap <leader>sj :set splitbelow<CR>:split<CR>
 	nnoremap <C-j> <C-w>j
 	nnoremap <C-k> <C-w>k
 	nnoremap <C-h> <C-w>h
 	nnoremap <C-l> <C-w>l
+	nnoremap <up> :res +1<CR>
+	nnoremap <down> :res -1<CR>
+	nnoremap <left> :vertical resize-1<CR>
+	nnoremap <right> :vertical resize+1<CR>
 " }}}
 " 设置连续键快捷插入成对符号 {{{
     vnoremap <leader>r( di(<Esc>pa)<Esc>
@@ -73,6 +81,11 @@ let mapleader="," " 设置连续键前缀为,(默认为\)
     nnoremap <s-Tab> V<
     vnoremap <Tab> >gv
     vnoremap <s-Tab> <gv
+" }}}
+" tab连续键设置 {{{
+	map ta :tabe<CR>
+	map tn :tabprev<CR>
+	map tp :tabnext<CR>
 " }}}
 " 移动键设置 {{{
 	nnoremap J 5j
@@ -92,6 +105,7 @@ let mapleader="," " 设置连续键前缀为,(默认为\)
 nnoremap <leader><Esc> :nohlsearch<CR>
 nnoremap <leader>y "+y
 nnoremap <leader>p "+p
+map <leader><leader> <Esc>/<++><CR>:nohlsearch<CR>c4l
 
 source $HOME/.vim/config/plug-load.vim
 
@@ -100,4 +114,5 @@ augroup default
 	autocmd BufWritePost *.vim source $HOME/.vim/vimrc
 	autocmd BufWritePost vimrc source $HOME/.vim/vimrc
 augroup end
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exec "normal! g'\"" | endif
 
