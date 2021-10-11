@@ -81,11 +81,10 @@ let mapleader="," " 设置连续键前缀为,(默认为\)
 	nnoremap L 5L
 " }}}
 " 保存退出快捷键 {{{
-	noremap <C-s> <Esc>:w<CR>
-    inoremap <C-s> <Esc>:w<CR>a
-	noremap <C-q> <Esc>:q<CR>
-	noremap <leader>q <Esc>:q!<CR>
-	noremap <leader>w <Esc>:w!<CR>
+    noremap <leader>q <Esc>:q<CR>
+    noremap <leader>s <Esc>:w<CR>
+	noremap <leader>Q <Esc>:q!<CR>
+	noremap <leader>S <Esc>:w!<CR>
 " }}}
 " 代码块收起/展开 {{{
 	noremap + za
