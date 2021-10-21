@@ -96,6 +96,7 @@ let mapleader="," " 设置连续键前缀为,(默认为\)
 " 保存退出快捷键 {{{
     noremap <leader>q <Esc>:q<CR>
     noremap <leader>s <Esc>:w<CR>
+	noremap <leader>x <Esc>:x<CR>
 	noremap <leader>Q <Esc>:q!<CR>
 	noremap <leader>S <Esc>:w!<CR>
 " }}}
