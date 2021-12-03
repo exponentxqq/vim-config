@@ -99,6 +99,8 @@ let mapleader="," " 设置连续键前缀为,(默认为\)
 	noremap <leader>x <Esc>:x<CR>
 	noremap <leader>Q <Esc>:q!<CR>
 	noremap <leader>S <Esc>:w!<CR>
+	noremap E $
+	noremap F ^
 " }}}
 " 代码块收起/展开 {{{
 	noremap + za
