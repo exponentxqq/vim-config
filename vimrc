@@ -11,7 +11,7 @@ set fileencodings=utf-8,gb2312,gbk,gb18030
 set termencoding=utf-8
 set encoding=prc
 set laststatus=2
-set spell spelllang=en_us
+" set spell spelllang=en_us,cjk
 set undofile
 set number
 set relativenumber
@@ -116,5 +116,7 @@ augroup default
 	autocmd BufWritePost *.vim source $HOME/.vim/vimrc
 	autocmd BufWritePost vimrc source $HOME/.vim/vimrc
 augroup end
+" 记住光标位置
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exec "normal! g'\"" | endif
+
 
