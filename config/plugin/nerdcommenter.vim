@@ -17,7 +17,7 @@ let g:NERDAltDelims_java = 1
 let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
 
 " Allow commenting and inverting empty lines (useful when commenting a region)
-let g:NERDCommentEmptyLines = 1
+let g:NERDCommentEmptyLines = 0
 
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
@@ -25,6 +25,7 @@ let g:NERDTrimTrailingWhitespace = 1
 " Enable NERDCommenterToggle to check all selected lines is commented or not 
 let g:NERDToggleCheckAllLines = 1
 
-noremap <C-l> V}:call nerdcommenter#Comment('x', 'toggle')<CR>
-noremap! <C-l> V{:call nerdcommenter#Comment('x', 'toggle')<CR>
+" noremap <C-l> V}:call nerdcommenter#Comment('x', 'toggle')<CR>
+" noremap! <C-l> V{:call nerdcommenter#Comment('x', 'toggle')<CR>
+" <leader>ci 单行注释
 
