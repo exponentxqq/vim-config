@@ -10,6 +10,7 @@ set undodir=~/.vim/.undo//
 set fileencodings=utf-8,gb2312,gbk,gb18030
 set termencoding=utf-8
 set encoding=utf-8
+set termguicolors
 set laststatus=2
 " set spell spelllang=en_us,cjk
 set undofile
@@ -46,7 +47,7 @@ set foldmethod=indent
 set foldlevel=99
 
 " 连续键配置
-let mapleader="," " 设置连续键前缀为,(默认为\)
+let mapleader=" " " 设置连续键前缀为,(默认为\)
 " 配置buffer快捷切换方式，使用:ls可以查看所有的buffer {{{
     nnoremap <leader>b1 :1b<CR>
     nnoremap <leader>b2 :2b<CR>
@@ -109,6 +110,8 @@ let mapleader="," " 设置连续键前缀为,(默认为\)
 	noremap <CR> o<Esc>
 	noremap <C-CR> O<Esc>
 	noremap U <C-r>
+    noremap ; :
+    noremap <leader>t :terminal<CR>
 " }}}
 " 代码块收起/展开 {{{
 	noremap + za

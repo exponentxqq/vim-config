@@ -38,6 +38,10 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-surround'
 " 彩虹括号
 Plug 'kien/rainbow_parentheses.vim'
+" 强化<C-a> <C-x>，可以对日期进行increment、decrement
+Plug 'tpope/vim-speeddating'
+" emmet html
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
