@@ -48,8 +48,6 @@
 	nnoremap L 5L
 	noremap E $
 	noremap F ^
-	nnoremap <leader>j ddp
-	nnoremap <leader>k ddkP
 " }}}
 " 保存退出快捷键 {{{
     noremap <leader>q <Esc>:q<CR>
@@ -95,6 +93,6 @@
 " 代码块收起/展开 {{{
 	noremap + za
 " }}}
-nnoremap <silent><leader><leader> :nohlsearch<CR>
+nnoremap <silent><leader><leader> :nohl<CR>
 vnoremap <silent><leader>y "+y
 
