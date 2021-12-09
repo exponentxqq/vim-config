@@ -56,30 +56,13 @@
 	noremap <leader>Q <Esc>:q!<CR>
 	noremap <leader>S <Esc>:w!<CR>
 " }}}
-" markdown 相关配置 {{{
-    inoremap ;mi ** <++><Esc>F*i
-    inoremap ;mb **** <++><Esc>F*;i
-    inoremap ;mn ****** <++><Esc>F*;;i
-    inoremap ;ms ~~~~ <++><Esc>F~;i
-    inoremap ;mh ------<Enter><Enter>
-    inoremap ;mt \| <++> \| <++> \|<Enter>\| ---- \| ---- \|<Enter>\| <++> \| <++> \|<Esc>kk0/<++><CR>:nohlsearch<CR>d4li
-    inoremap ;ml [](<++>)<Esc>F]i
-    inoremap ;mp ![](<++>)<Esc>F]i
-    inoremap ;mc ```<Enter><++><Enter>```<Esc>kkA
-    inoremap ;mv `` <++><Esc>F`i
-    inoremap ;m1 #<Space><Enter><Enter><++><Esc>2kA
-    inoremap ;m2 ##<Space><Enter><Enter><++><Esc>2kA
-    inoremap ;m3 ###<Space><Enter><Enter><++><Esc>2kA
-    inoremap ;m4 ####<Space><Enter><Enter><++><Esc>2kA
-    inoremap ;m5 #####<Space><Enter><Enter><++><Esc>2kA
-    inoremap ;m6 ######<Space><Enter><Enter><++><Esc>2kA
-" }}}
 " 编辑相关配置 {{{
 	noremap <CR> o<Esc>
 	noremap <C-CR> O<Esc>
 	noremap U <C-r>
     noremap <leader>t :terminal<CR>
 	inoremap jk <Esc><right>
+    inoremap <Esc> <Esc><right>
 	inoremap <C-x> <Esc>:
     inoremap <C-d> <Esc>yyp
 	inoremap ( ()<left>
@@ -88,7 +71,9 @@
     inoremap < <><left>
     inoremap ' ''<left>
     inoremap " ""<left>
-	inoremap ;f <Esc>/<++><CR>:nohlsearch<CR>d4li
+	inoremap ;f <Esc>/<++><CR>:nohlsearch<CR>i<Del><Del><Del><Del>
+    inoremap ;s <++><Esc>F<i
+    inoremap ;d <Esc>A
 " }}}
 " 代码块收起/展开 {{{
 	noremap + za
